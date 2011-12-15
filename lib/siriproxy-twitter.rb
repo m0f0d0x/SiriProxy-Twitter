@@ -14,7 +14,7 @@ class SiriProxy::Plugin::Twitter < SiriProxy::Plugin
     @twitterClient = ::Twitter::Client.new
   end
 
-  listen_for /tweet (.+)/i do |tweetText|
+  listen_for /twitter update (.+)/i do |tweetText|
     say "Here is your tweet:"
 
     # send a "Preview" of the Tweet
